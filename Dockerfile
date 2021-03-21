@@ -8,6 +8,6 @@ RUN     apk update && \
         mkdir -p /var/www && \
         chown nobody:nobody -R /var/www && \
         python3 -m pip install --user cvdupdate && \
-        cvd config set --dbdir /var/www && \
-        cvd update && \
-        cvd serve
+        /root/.local/bin/cvd config set --dbdir /var/www && \
+        /root/.local/bin/cvd update && \
+        /root/.local/bin/cvd serve
